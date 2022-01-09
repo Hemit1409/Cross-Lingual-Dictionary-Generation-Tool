@@ -2,12 +2,12 @@ import os
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-with open(r"data/gujaratiDataSet.txt","r+",encoding="utf-8") as file:
+with open(r"data/gujsentences.txt","r+",encoding="utf-8") as file:
   str = file.read()
 
 file.close()
 
-with open(r"data/hindiDataSet.txt","r+",encoding="utf-16") as file1:
+with open(r"data/hindisentences.txt","r+",encoding="utf-16") as file1:
   str2 = file1.read()
 
 print (sent_tokenize(str))
