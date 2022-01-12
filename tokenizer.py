@@ -10,15 +10,15 @@ file.close()
 with open(r"data/hindisentences.txt","r+",encoding="utf-16") as file1:
   str2 = file1.read()
 
-print (sent_tokenize(str))
-print (sent_tokenize(str2))
+#print (sent_tokenize(str))
+#print (sent_tokenize(str2))
 
 wordlist=word_tokenize(str)
 wordlist2=word_tokenize(str2)
 
-print("printing")
-print(wordlist)
-print(wordlist2)
+#print("printing")
+#print(wordlist)
+#print(wordlist2)
 
 
 with open(r"data/gujaratitokens.txt","w",encoding="utf-8") as file2:
