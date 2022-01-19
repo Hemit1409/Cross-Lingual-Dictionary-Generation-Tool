@@ -1,5 +1,19 @@
 # Cross-Lingual-Dictionary-Generation-Tool
-Cross Lingual Dictionary Generation Tool Using Phonetic Similarity for Natural Language Translation of Hindi to Gujarati.
+description: Cross Lingual Dictionary Generation Tool Using Phonetic Similarity for Natural Language Translation of Hindi to Gujarati.
+
+# technology:
+python, NLP
+
+# team:
+19ce098 : Heer Patel
+19ce119 : Hemit Rana
+19ce121 : Shruti Rana
+20ce114 : Yagnik Poshiya
+20ce132 : Nisarg Shah
+20ce155 : Adnan Vahora
+
+# mentor:
+Dr. Ashwin Makwana
 
 # Key words: 
 Natural Language Processing, Machine Translation, Linguistic Resources, Corpus, Phonology, and Hamming Distance.
