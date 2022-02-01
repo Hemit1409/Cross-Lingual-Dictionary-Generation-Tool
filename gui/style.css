@@ -1,0 +1,156 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.mainPage{
+    background-color: #95D1CC;
+    height: 100vh;
+}
+/* heading */
+.headingTop{
+    color: #22577E;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+/* middle row */
+.inputArea{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+/* left side */
+.leftCol{
+    display: flex;
+    flex-direction: column;
+}
+.leftCol > .leftBox , .rightBox{
+    height: 15rem;
+    width: 13rem;
+    background-color: aliceblue;
+    border-radius: 0.2rem ;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-color: #22577E #6ef7ebc7;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.leftCol > .leftBox > .wordList > .word ,.word{
+    padding: 0.4rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.leftCol > .leftBox > .wordList > .word:hover , .word:hover{
+    color: #95D1CC;
+    background-color: #22577E;
+}
+.borderLine{
+    border:1px solid #22577E;
+}
+
+.searchWord > .inputSearch{  /*search input*/
+    padding: 0.5rem;
+    width: 10.5rem;
+    border: 2px solid #22577E;
+    background-color: aliceblue;
+    outline: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+}
+.searchIcon{
+    cursor: pointer;
+    color: #22577E;
+    padding-left: 0.2rem; 
+    font-size: 1.1rem;
+}
+
+/* middle side */
+.lvlHead{
+    font-size: 1.2rem;
+    text-align: center;
+    color: #22577E;
+}
+.middleCol{
+    display: flex;
+    flex-direction: column;
+}
+.selectOpthion{
+    text-align: center;
+}
+.selectLvl{
+    margin-top: 1rem;
+    width: 4rem;
+    text-align: center;
+    background-color: #22577E;
+    color: #95D1CC;
+    border: none;
+    padding: 0.6rem;
+    outline: none;
+}
+.ipDisplay{
+    margin-top: 7rem;
+    display: flex;
+}
+.displayBoxLeft{
+    height: 2rem;
+    width: 10rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+.displayBoxRight{
+    margin-left: 0.5rem;
+    height: 2rem;
+    width: 10rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+.textLabel{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.7rem;
+    font-weight: 600;
+    color: #22577E;
+}
+
+/* right side */
+.rigthCol{
+    display: flex;
+    flex-direction: column;
+}
+.selectStatement{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* Button part */
+.btnArea{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.translateBtn{
+    cursor: pointer;
+    text-align: center;
+    background-color: #22577E;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    color: #95D1CC;
+}
+.translateBtn:hover{
+    color: #22577E;
+    background-color: #F6F2D4;
+}

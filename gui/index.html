@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sgp Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+    <script type="text/javascript" src="jsapi.js"></script>
+    <script type="text/javascript">
+        
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+
+        function onLoad() {
+            var options = {
+                sourceLanguage:
+                    google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage:
+                    [google.elements.transliteration.LanguageCode.GUJARATI],
+                shortcutKey: 'ctrl+g',
+                transliterationEnabled: true
+            };
+
+            // Create an instance on TransliterationControl with the required
+            // options.
+            var control = new google.elements.transliteration.TransliterationControl(options);
+
+            // Enable transliteration in the textbox with id
+            // 'transliterateTextarea'.
+            control.makeTransliteratable(['typedWord']);
+      }
+      google.setOnLoadCallback(onLoad);
+
+    </script>
+</head>
+<body>
+    <section class="mainPage">
+        <div class="headingTop">Translator</div>
+        <section class="inputArea">
+            <div class="leftCol">
+
+                <div class="leftBox">                  
+                    <div class="wordList">
+                        <div class="word">एक</div><div class="borderLine"></div>
+                        <div class="word">बार</div><div class="borderLine"></div>
+                        <div class="word">एक</div><div class="borderLine"></div>
+                        <div class="word">शेर</div><div class="borderLine"></div>
+                        <div class="word">जंगल</div><div class="borderLine"></div>
+                        <div class="word">में</div><div class="borderLine"></div>
+                        <div class="word">सो</div><div class="borderLine"></div>
+                        <div class="word">रहा</div><div class="borderLine"></div>
+                        <div class="word">था</div><div class="borderLine"></div>
+                        <div class="word">तभी</div><div class="borderLine"></div>
+                        <div class="word">एक</div><div class="borderLine"></div>
+                        <div class="word">चूहा</div><div class="borderLine"></div>
+                        <div class="word">मौज-मस्ती</div><div class="borderLine"></div>
+                        <div class="word">के</div><div class="borderLine"></div>
+                        <div class="word">लिए</div><div class="borderLine"></div>
+                        <div class="word">उसके</div><div class="borderLine"></div>
+                        <div class="word">शरीर</div><div class="borderLine"></div>
+                        <div class="word">को</div>    
+                    </div>
+                </div>
+                <div class="searchWord">
+                    <input type="text" class="inputSearch" id="typedWord"> 
+                    <span class="searchIcon">
+                        <i class="fa fa-search fa-lg"></i>
+                    </span>
+                </div>
+
+            </div>
+
+            
+            <div class="middleCol">
+                <div class="lvlHead">Choose Level</div>    
+                
+                <div class="selectOpthion">
+                    <select class="selectLvl">
+                        <option value="1" >1</option>
+                        <option value="2" >2</option>
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                    </select>
+                </div>
+
+                <div class="ipDisplay">
+                    <div class="middleCol">
+                        <div class="displayBoxLeft">
+                            एक
+                        </div>
+                        <div class="textLabel">Hindi</div>
+                    </div>
+                    
+                    <div>
+                        <div class="displayBoxRight">
+                            એક
+                        </div>
+                        <div class="textLabel">Gujarati</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rigthCol">
+                <div class="rightBox">                        
+                    <div class="word">એક</div><div class="borderLine"></div>
+                    <div class="word">સિંહ</div><div class="borderLine"></div>
+                    <div class="word">એકવાર</div><div class="borderLine"></div>
+                    <div class="word">જંગલમાં</div><div class="borderLine"></div>
+                    <div class="word">સૂતો</div><div class="borderLine"></div>
+                    <div class="word">હતો</div><div class="borderLine"></div>
+                    <div class="word">ત્યારે</div><div class="borderLine"></div>
+                    <div class="word">એક</div><div class="borderLine"></div>
+                    <div class="word">ઉંદર</div><div class="borderLine"></div>
+                    <div class="word">માત્ર</div><div class="borderLine"></div>
+                </div>
+                <div class="selectStatement">Select Appropriate One</div>
+            </div>
+
+        </section>
+        <section class="btnArea">
+            <button class="translateBtn">Submit</button>
+        </section>
+    </section>
+
+</body>
+<script type="text/javascript" src="eel.js"></script>
+<script type="text/javascript" src="index.js"></script> 
+</html>
