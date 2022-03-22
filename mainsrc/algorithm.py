@@ -206,25 +206,69 @@ hin_content = [line.rstrip() for line in hin_file.readlines()]
 
 # print(hin_content)
 
-def optimal_list(guj, level):
+def optimal_dict_genrator(guj, level):
     # for guj_words in guj_content:
     guj_words = guj
     # {hamming_dist: {first_letter, first_matra, char_dist, vov_dist}}
     my_dict = {}
     out_list = list()
-    for hin_words in hin_content:
+    for hin_word in hin_content:
         tempContainer = list()
-        hin = translitarrate_hin_guj(hin_words)
-        dist = hamming_distance(guj_words, hin_words)
+        hin = translitarrate_hin_guj(hin_word)
+        dist = hamming_distance(guj_words, hin_word)
 
-        # [actual_dist ,first_matra, matra_dist], [first_char, char_dist]
+        # print(dist)
+
+        def comparator(dist_list):
+            # when first matra is same
+            if dist_list[1][0]:
+                # when first char is same
+                if dist_list[2][0]:
+                    return 1
+                # when first char is different
+                else:
+                    return 3
+            # when first matra is not same
+            else:
+                # when first char is same
+                if dist_list[2][0]:
+                    return 2
+                # when first char and matra are not same
+                else:
+                    return 4
+
+        # [actual_dist ,[first_matra, matra_dist], [first_char, char_dist]]
         # [0.5, [True, 0.5], [True, 0]]
-        if (0 < dist[0] <= level):
+        if (0 < dist[0] <= level and dist[0] != -1):
             # print("hamming_distance: " + str(dist) + "  " + str(guj_words) + " " + str(hin_words))
-            out_list.append(hin_words)
 
-    return out_list
+            out_list.append(hin_word)
+            if dist[0] in my_dict.keys():
+                res = comparator(dist)
+                if res in my_dict[dist[0]]:
+                    my_dict[dist[0]][res].append(hin_word)
+                else:
+                    my_dict[dist[0]][res] = [hin_word]
+            else:
+                res = comparator(dist)
+                my_dict[dist[0]] = {res: [hin_word]}
+
+    return my_dict
     # hamming_distance("કૂતરો", "कुत्ता")
+
+
+def optimal_list(guj, level):
+    optimal_dict = optimal_dict_genrator(guj, level)
+    # print(optimal_dict)
+    out_list = list()
+    for key in sorted(optimal_dict.keys()):
+        # print(key)
+        for key2 in sorted(optimal_dict[key].keys()):
+            # print(key2)
+            # print(optimal_dict[key][key2])
+            for i in optimal_dict[key][key2]:
+                out_list.append(i)
+    return out_list
 
     # # Making Priority List based on nearest hamming distance
 
@@ -232,4 +276,4 @@ def optimal_list(guj, level):
 
 
 if __name__ == '__main__':
-    print(optimal_list('વાઘ', 1.5))
+    print(optimal_list('કૂતરો', 1.5))
