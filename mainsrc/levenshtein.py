@@ -78,11 +78,11 @@ def printDistances(distances, token1Length, token2Length):
         for t2 in range(token2Length + 1):
             print(int(distances[t1][t2]), end=" ")
         print()
-        
+
+
 # test_list
 word1 = "શાબાસ"
 word2 = "सोमवार"
-hin_as_guj = translitarrate_hin_guj(word2)        
-#levenshteinDistanceDP2("kelm", "hello")
-distance = levenshteinDistanceDP2(word1, word2)
-
+hin_as_guj = translitarrate_hin_guj(word2)
+levenshteinDistanceDP2("kelm", "hello")
+# distance = levenshteinDistanceDP2(word1, word2)
