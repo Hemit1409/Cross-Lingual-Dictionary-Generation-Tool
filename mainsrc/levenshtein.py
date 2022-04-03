@@ -83,17 +83,17 @@ def printDistances(distances, token1Length, token2Length):
 
 
 # test_list
-<<<<<<< Updated upstream
+
 word1 = "શાબાસ"
 word2 = "सोमवार"
 hin_as_guj = translitarrate_hin_guj(word2)
-=======
+
 # word1 = "શાબાસ"
 # word2 = "सोमवार"
 
 word1 = "Hemit"
 word2 = "Henill"
 hin_as_guj = translitarrate_hin_guj(word2)        
->>>>>>> Stashed changes
+
 #levenshteinDistanceDP2("kelm", "hello")
 levenshteinDistanceDP2(word1, word2)
