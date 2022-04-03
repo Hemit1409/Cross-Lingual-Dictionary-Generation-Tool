@@ -27,6 +27,7 @@ def translitarrate_hin_guj(s):
             output.append(gu_cons[hi_cons.index(i)])
         else:
             output.append(i)
+    print(output)        
     return ''.join(output)
 
 def levenshteinDistanceDP2(token1, token2):
@@ -59,6 +60,7 @@ def levenshteinDistanceDP2(token1, token2):
                     distances[t1][t2] = c + 1
 
     printDistances(distances, len(token1), len(token2))
+    print(token1)
     return distances[len(token1)][len(token2)]
 
 def levenshteinDistanceDP(token1, token2):
@@ -81,8 +83,17 @@ def printDistances(distances, token1Length, token2Length):
 
 
 # test_list
+<<<<<<< Updated upstream
 word1 = "શાબાસ"
 word2 = "सोमवार"
 hin_as_guj = translitarrate_hin_guj(word2)
-levenshteinDistanceDP2("kelm", "hello")
-# distance = levenshteinDistanceDP2(word1, word2)
+=======
+# word1 = "શાબાસ"
+# word2 = "सोमवार"
+
+word1 = "Hemit"
+word2 = "Henill"
+hin_as_guj = translitarrate_hin_guj(word2)        
+>>>>>>> Stashed changes
+#levenshteinDistanceDP2("kelm", "hello")
+levenshteinDistanceDP2(word1, word2)
