@@ -1,0 +1,4 @@
+matplotlib
+indic_nlp_library
+tk
+bs4
