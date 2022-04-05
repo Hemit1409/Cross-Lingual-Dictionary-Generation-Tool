@@ -91,9 +91,9 @@ hin_as_guj = translitarrate_hin_guj(word2)
 # word1 = "શાબાસ"
 # word2 = "सोमवार"
 
-word1 = "Hemit"
-word2 = "Henill"
-hin_as_guj = translitarrate_hin_guj(word2)        
+# word1 = "Hemit"
+# word2 = "Henill"
+# hin_as_guj = translitarrate_hin_guj(word2)        
 
 #levenshteinDistanceDP2("kelm", "hello")
 levenshteinDistanceDP2(word1, word2)
