@@ -26,3 +26,5 @@ As is well known, Natural Language processing presents many challenges, of which
 
 The technology behind developing a machine translation system is not so simple. Merely replacing source language words with target language words cannot produce a good machine translation system. A word for word translation does not exactly produce a very satisfying target language text. A good machine translation system must incorporate not only a good knowledge of the vocabulary of both the source and target language, but also of their grammar.
 
+# step to execute the project
+
