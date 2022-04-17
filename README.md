@@ -28,3 +28,6 @@ The technology behind developing a machine translation system is not so simple. 
 
 # steps to execute the project
 
+
+
+
