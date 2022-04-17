@@ -38,6 +38,8 @@ def translitarrate_hin_guj(s):
             output.append(matra_guj[matra_hin.index(i)])
         elif i in hi_cons:
             output.append(gu_cons[hi_cons.index(i)])
+        elif i in hi_vow:
+            output.append(gu_vow[hi_vow.index(i)])
         else:
             output.append(i)
     return ''.join(output)
