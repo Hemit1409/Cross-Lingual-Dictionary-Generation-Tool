@@ -2,7 +2,7 @@
 Cross Lingual Dictionary Generation Tool Using Phonetic Similarity for Natural Language Translation of Hindi to Gujarati.
 
 # Key words: 
-Natural Language Processing, Machine Translation, Linguistic Resources, Corpus, Phonology, and Hamming Distance.
+Natural Language Processing, Machine Translation, Linguistic Resources, Corpus, Phonology, and Hamming Distance, levenshtein distance.
 
 # Introduction:
 
