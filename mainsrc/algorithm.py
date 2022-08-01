@@ -13,8 +13,8 @@ hi_cons = ['क', 'ख', 'ग', 'घ', 'ङ', 'च', 'छ', 'ज', 'झ', 'ञ',
 script_path = os.path.abspath('')  # i.e. /path/to/dir/foobar.py
 script_dir = os.path.split(script_path)[0]  # i.e. /path/to/dir/
 script_dir2 = os.path.split(script_dir)[0]
-my_guj_token = script_dir + "\data\myListGuj.txt"
-my_hin_token = script_dir + "\data\myListHindi.txt"
+my_guj_token = script_dir + "\data\GujaratiOutput.txt"
+my_hin_token = script_dir + "\data\HindiOutput.txt"
 guj_file = open(my_guj_token, "r", encoding="utf-8")
 hin_file = open(my_hin_token, "r", encoding="utf-8")
 
@@ -132,9 +132,8 @@ def optimal_dict_genrator(guj, level):
 
         # [actual_dist ,[first_matra, matra_dist], [first_char, char_dist]]
         # [0.5, [True, 0.5], [True, 0]]
-        if (0 < dist[0] <= level and dist[0] != -1):
-            # print("hamming_distance: " + str(dist) + "  " + str(guj_words) + " " + str(hin_words))
-
+        if (0 <= dist[0] <= level and dist[0] != -1):
+            print("hamming_distance: " + str(dist) + "  " + str(guj_words) + " " + str(hin_word))
             out_list.append(hin_word)
             if dist[0] in my_dict.keys():
                 res = comparator(dist)
@@ -154,7 +153,7 @@ def optimal_list(guj, level):
     optimal_file_path = script_dir + "\data\optimal_list.txt"
     out_file = open(optimal_file_path, "w", encoding="utf-8")
     optimal_dict = optimal_dict_genrator(guj, level)
-    # print(optimal_dict)
+    optimal_dict
     out_list = list()
     for key in sorted(optimal_dict.keys()):
         # print(key)
@@ -169,4 +168,5 @@ def optimal_list(guj, level):
 
 # Making Priority List based on nearest hamming distance
 if __name__ == '__main__':
-    print(optimal_list('बाढ़', 1.5))
+    print(optimal_list('ઘાસવાળી', 4 ))
+    # print(guj_content)
